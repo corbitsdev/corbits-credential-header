@@ -1,11 +1,14 @@
 import { expect, test } from "bun:test";
 
-import { xApiKeyCredentialProvider, X_API_KEY_PROVIDER_KEY } from "./presets";
+import {
+  xApiKeyCredentialProvider,
+  X_API_KEY_PROVIDER_KEY,
+} from "./presets.js";
 import {
   rawAuthorizationCredentialProvider,
   RAW_AUTHORIZATION_PROVIDER_KEY,
-} from "./presets";
-import { createHeaderCredentialProvider } from "./header-credential-provider";
+} from "./presets.js";
+import { createHeaderCredentialProvider } from "./header-credential-provider.js";
 
 const ORIGIN = "https://api.exa.ai";
 

@@ -2,7 +2,7 @@ export {
   createHeaderCredentialProvider,
   type FetchLike,
   type HeaderCredentialProviderOptions,
-} from "./header-credential-provider";
+} from "./header-credential-provider.js";
 
 export {
   xApiKeyCredentialProvider,
@@ -10,4 +10,4 @@ export {
   X_API_KEY_PROVIDER_KEY,
   RAW_AUTHORIZATION_PROVIDER_KEY,
   type HeaderPresetOptions,
-} from "./presets";
+} from "./presets.js";

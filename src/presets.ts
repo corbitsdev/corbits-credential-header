@@ -1,7 +1,7 @@
 import {
   createHeaderCredentialProvider,
   type FetchLike,
-} from "./header-credential-provider";
+} from "./header-credential-provider.js";
 import type { CredentialProvider } from "@intx/types";
 
 export interface HeaderPresetOptions {
