@@ -1,5 +1,18 @@
 # @corbits/credential-header
 
+> [!IMPORTANT]
+> This package moved to [`@corbits/credential-http`](https://github.com/corbitsdev/credential-http), which also covers MCP streamable HTTP. New code should use it. Plugin keys and header shapes are unchanged, so stored credential rows need no migration. One behavior changes: an empty secret now sends no header.
+>
+> | `@corbits/credential-header`                                       | `@corbits/credential-http`                        |
+> | ------------------------------------------------------------------ | ------------------------------------------------- |
+> | `xApiKeyCredentialProvider(opts?)`                                 | `createXApiKeyCredentialProvider(opts?)`          |
+> | `rawAuthorizationCredentialProvider(opts?)`                        | `createRawAuthorizationCredentialProvider(opts?)` |
+> | `createHeaderCredentialProvider({ key, header, prefix?, fetch? })` | unchanged, plus `extraOrigins?`                   |
+> | `HeaderPresetOptions`                                              | `CredentialPresetOptions`                         |
+> | `X_API_KEY_PROVIDER_KEY`, `RAW_AUTHORIZATION_PROVIDER_KEY`         | unchanged                                         |
+> | `HeaderCredentialProviderOptions`                                  | unchanged                                         |
+> | `FetchLike`                                                        | import from `@intx/harness`                       |
+
 A header-shaped `CredentialProvider` for Interchange: `@intx/harness`'s
 vendored `createHttpCredentialProvider` always sends
 `authorization: Bearer <secret>`, which doesn't fit an API that expects the
